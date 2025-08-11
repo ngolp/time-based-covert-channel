@@ -36,4 +36,4 @@
 ## Next Steps (for when I have more time)
 1. Use the pseudo-random number generator to randomize window mode and threshold mode configuration settings.
 2. Use the pseudo-random number generator to randomize the protocol used for communication. It's not ideal to stick with just HTTP.
-3. Randomize the actual packet contents being sent. Right now, we send exactly the same packet through the network, which could be suspicious.
+3. Use the pseudo-random number generator to randomize the actual packet contents being sent. Right now, we send exactly the same packet through the network, which could be suspicious.
