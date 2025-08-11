@@ -8,7 +8,7 @@ import random
 
 # MODE SETTINGS
 WINDOW_MODE = 1                 # WINDOW MODE: If x < 5 packets delivered within 0.1 seconds, then 0; else 1
-WINDOW_BYTES = 5
+WINDOW_PACKETS = 5
 TIME_WINDOW = 0.1
 THRESHOLD_MODE = 2              # THRESHOLD MODE: if two packet delivered before 0.1 seconds, then 0; else 1
 TIME_THRESHOLD = 0.1
@@ -66,7 +66,7 @@ def recv_bit_window_mode(conn, window):
 
     # parse how many HTTPS packets we got and determine the bit
     packets_received = buffer.count(b"POST")
-    bit = int(packets_received >= WINDOW_BYTES)
+    bit = int(packets_received >= WINDOW_PACKETS)
     if DEBUG:
         print(f"Packets received: {packets_received}")
         print(f"Interpreted bit: {bit}")
